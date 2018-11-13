@@ -1,0 +1,1041 @@
+/*html,body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none; 
+  user-select: none;
+  overflow: hidden;
+}*/
+
+body {
+    min-height: 100%;
+}
+
+.container {
+    width: 96vw;
+    margin: 0 auto;
+}
+
+.player-main {
+    width: 100vw;
+    overflow: hidden;
+}
+
+.video-container,
+.play-video {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.video-container {
+    display: none;
+}
+
+.play-video {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.video-container {
+    position: relative;
+    /*background: #000;*/
+    width: 100%;
+    height: 100%;
+}
+
+.video-box {
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    /*background: url('http://img.s3.huajiao.com/Object.getPreview/hj-img/MzU5NjYzNDkxNTA1MjA4NjQ5ODg2NTA4NDYwMDQ3LmpwZw==/360/640') no-repeat;*/
+    background-size: 100% 100%;
+    text-align: center;
+    overflow: hidden;
+    position: absolute;
+}
+
+.video-box>video {
+    /*width: 100%;*/
+    display: block;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    /*      
+            background:transparent url('http://img.s3.huajiao.com/Object.getPreview/hj-img/MzU5NjYzNDkxNTA1MjA4NjQ5ODg2NTA4NDYwMDQ3LmpwZw==/360/640')50% 50% no-repeat;
+              
+            -webkit-background-size:cover;
+            -moz-background-size:cover;
+            -o-background-size:cover;
+            background-size:cover;*/
+}
+
+.video-container>.video-tip {
+    position: absolute;
+    z-index: 120;
+}
+
+.video-container>.video-tip-top {
+    top: .1rem;
+    width: 100%;
+    display: flex;
+    display: -webkit-box;
+    /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+    display: -moz-box;
+    /* 老版本语法: Firefox (buggy) */
+    display: -ms-flexbox;
+    /* 混合版本语法: IE 10 */
+    display: -webkit-flex;
+    /* 新版本语法: Chrome 21+ */
+    display: flex;
+    /* 新版本语法: Opera 12.1, Firefox 22+ */
+    justify-content: space-between;
+    align-items: center;
+    -webkit-box-align: center;
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    padding: 0 0.1rem;
+}
+
+.video-container>.video-tip-top-2 {
+    top: .5rem;
+}
+
+.video-container>.video-tip-top>a:last-child {
+    display: flex;
+    display: -webkit-box;
+    /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+    display: -moz-box;
+    /* 老版本语法: Firefox (buggy) */
+    display: -ms-flexbox;
+    /* 混合版本语法: IE 10 */
+    display: -webkit-flex;
+    /* 新版本语法: Chrome 21+ */
+    display: flex;
+    /* 新版本语法: Opera 12.1, Firefox 22+ */
+    justify-content: center;
+    -webkit-box-pack: center;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    align-items: center;
+    -webkit-box-align: center;
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    font-size: .12rem;
+    height: .3rem;
+    color: #fff;
+    padding: 0 0.08rem;
+    border-radius: .3rem;
+    background: -webkit-linear-gradient(to right, #fe426f 0, #ff7897 100%);
+    background: linear-gradient(to right, #fe426f 0, #ff7897 100%);
+}
+
+.video-container>.video-tip-top-2>a:last-child {
+    height: .25rem;
+    border-radius: .25rem;
+    background: rgba(3, 3, 3, .7);
+}
+
+.video-container>.video-tip-btm {
+    bottom: .15rem;
+    width: 100%;
+    display: flex;
+    display: -webkit-box;
+    /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+    display: -moz-box;
+    /* 老版本语法: Firefox (buggy) */
+    display: -ms-flexbox;
+    /* 混合版本语法: IE 10 */
+    display: -webkit-flex;
+    /* 新版本语法: Chrome 21+ */
+    display: flex;
+    /* 新版本语法: Opera 12.1, Firefox 22+ */
+    justify-content: space-between;
+    align-items: center;
+    -webkit-box-align: center;
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    padding: 0 .1rem;
+    -webkit-tap-highlight-color: rgba(255, 0, 0, 0);
+    z-index: 120;
+}
+
+
+/*弹幕*/
+
+.video-container>.video-tip-mid {
+    bottom: .7rem;
+    width: 48%;
+    height: 40%;
+    margin-left: .1rem;
+    border: 1px solid #f00;
+    overflow: hidden;
+    font-size: .12rem;
+}
+
+.video-tip-mid ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.video-tip-mid ul li {
+    list-style: none;
+    display: table;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 4px 0;
+    padding-left: 5px;
+    font-size: 14px;
+    line-height: 14px;
+    color: #FFF;
+    -webkit-text-shadow: 0 1px 0 #000;
+    -moz-text-shadow: 0 1px 0 #000;
+    -ms-text-shadow: 0 1px 0 #000;
+    -o-text-shadow: 0 1px 0 #000;
+    text-shadow: 0 1px 0 #000;
+    -webkit-transition: opacity .3s;
+    -moz-transition: opacity .3s;
+    -ms-transition: opacity .3s;
+    -o-transition: opacity .3s;
+    transition: opacity .3s;
+}
+
+.level_info {
+    width: 29px;
+    height: 15px;
+    line-height: 15px;
+    display: inline-block;
+    background: url(http://p1.qhimg.com/d/inn/fef6565a/level.png) no-repeat;
+    background-position: -29px 0;
+    background-size: 145px 105px;
+    font-style: normal;
+    font-size: 9px;
+    color: #fff;
+    padding-right: 4px;
+    padding-left: 11px;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: center;
+    margin-right: 6px;
+}
+
+ul .level_1 {
+    background: url(http://p1.qhimg.com/d/inn/fef6565a/level.png) no-repeat;
+    background-position: -29px 0;
+    background-size: 145px 105px;
+}
+
+ul .color_0 {
+    color: #EFBA35;
+}
+
+
+/*等级*/
+
+ul .level_1 {
+    background: url(http://p1.qhimg.com/d/inn/fef6565a/level.png) no-repeat;
+    background-position: -29px 0;
+    background-size: 145px 105px
+}
+
+ul .level_2 {
+    background: url(http://p1.qhimg.com/d/inn/fef6565a/level.png) no-repeat;
+    background-position: -87px -15px;
+    background-size: 145px 105px
+}
+
+ul .level_3 {
+    background: url(http://p1.qhimg.com/d/inn/fef6565a/level.png) no-repeat;
+    background-position: 0 -15px;
+    background-size: 145px 105px
+}
+
+ul .level_4 {
+    background: url(http://p1.qhimg.com/d/inn/fef6565a/level.png) no-repeat;
+    background-position: -29px -15px;
+    background-size: 145px 105px
+}
+
+ul .level_5 {
+    background: url(http://p1.qhimg.com/d/inn/fef6565a/level.png) no-repeat;
+    background-position: 0 -30px;
+    background-size: 145px 105px
+}
+
+ul .level_6 {
+    background: url(http://p1.qhimg.com/d/inn/fef6565a/level.png) no-repeat;
+    background-position: -29px -30px;
+    background-size: 145px 105px
+}
+
+ul .level_7 {
+    background: url(http://p1.qhimg.com/d/inn/fef6565a/level.png) no-repeat;
+    background-position: -58px 0;
+    background-size: 145px 105px
+}
+
+ul .level_8 {
+    background: url(http://p1.qhimg.com/d/inn/fef6565a/level.png) no-repeat;
+    background-position: -58px -15px;
+    background-size: 145px 105px
+}
+
+ul .level_9 {
+    background: url(http://p1.qhimg.com/d/inn/fef6565a/level.png) no-repeat;
+    background-position: -58px -30px;
+    background-size: 145px 105px
+}
+
+ul .level_10 {
+    background: url(http://p1.qhimg.com/d/inn/fef6565a/level.png) no-repeat;
+    background-position: 0 -45px;
+    background-size: 145px 105px
+}
+
+ul .level_11 {
+    background: url(http://p1.qhimg.com/d/inn/fef6565a/level.png) no-repeat;
+    background-position: -29px -45px;
+    background-size: 145px 105px
+}
+
+ul .level_12 {
+    background: url(http://p1.qhimg.com/d/inn/fef6565a/level.png) no-repeat;
+    background-position: -58px -45px;
+    background-size: 145px 105px
+}
+
+ul .level_13 {
+    background: url(http://p1.qhimg.com/d/inn/fef6565a/level.png) no-repeat;
+    background-position: 0 -60px;
+    background-size: 145px 105px
+}
+
+ul .level_14 {
+    background: url(http://p1.qhimg.com/d/inn/fef6565a/level.png) no-repeat;
+    background-position: -29px -60px;
+    background-size: 145px 105px
+}
+
+ul .level_15 {
+    background: url(http://p1.qhimg.com/d/inn/fef6565a/level.png) no-repeat;
+    background-position: -58px -60px;
+    background-size: 145px 105px
+}
+
+ul .level_16 {
+    background: url(http://p1.qhimg.com/d/inn/fef6565a/level.png) no-repeat;
+    background-position: -87px 0;
+    background-size: 145px 105px
+}
+
+ul .level_17 {
+    background: url(http://p1.qhimg.com/d/inn/fef6565a/level.png) no-repeat;
+    background-position: 0 0;
+    background-size: 145px 105px
+}
+
+ul .level_18 {
+    background: url(http://p1.qhimg.com/d/inn/fef6565a/level.png) no-repeat;
+    background-position: -87px -30px;
+    background-size: 145px 105px
+}
+
+ul .level_19 {
+    background: url(http://p1.qhimg.com/d/inn/fef6565a/level.png) no-repeat;
+    background-position: -87px -45px;
+    background-size: 145px 105px
+}
+
+ul .level_20 {
+    background: url(http://p1.qhimg.com/d/inn/fef6565a/level.png) no-repeat;
+    background-position: -87px -60px;
+    background-size: 145px 105px
+}
+
+ul .level_21 {
+    background: url(http://p1.qhimg.com/d/inn/fef6565a/level.png) no-repeat;
+    background-position: 0 -75px;
+    background-size: 145px 105px
+}
+
+ul .level_22 {
+    background: url(http://p1.qhimg.com/d/inn/fef6565a/level.png) no-repeat;
+    background-position: -29px -75px;
+    background-size: 145px 105px
+}
+
+ul .level_23 {
+    background: url(http://p1.qhimg.com/d/inn/fef6565a/level.png) no-repeat;
+    background-position: -58px -75px;
+    background-size: 145px 105px
+}
+
+ul .level_24 {
+    background: url(http://p1.qhimg.com/d/inn/fef6565a/level.png) no-repeat;
+    background-position: -87px -75px;
+    background-size: 145px 105px
+}
+
+ul .level_25 {
+    background: url(http://p1.qhimg.com/d/inn/fef6565a/level.png) no-repeat;
+    background-position: 0 -90px;
+    background-size: 145px 105px
+}
+
+ul .level_26 {
+    background: url(http://p1.qhimg.com/d/inn/fef6565a/level.png) no-repeat;
+    background-position: -29px -90px;
+    background-size: 145px 105px
+}
+
+ul .level_27 {
+    background: url(http://p1.qhimg.com/d/inn/fef6565a/level.png) no-repeat;
+    background-position: -58px -90px;
+    background-size: 145px 105px
+}
+
+ul .level_28 {
+    background: url(http://p1.qhimg.com/d/inn/fef6565a/level.png) no-repeat;
+    background-position: -87px -90px;
+    background-size: 145px 105px
+}
+
+ul .level_29 {
+    background: url(http://p1.qhimg.com/d/inn/fef6565a/level.png) no-repeat;
+    background-position: -116px 0;
+    background-size: 145px 105px
+}
+
+ul .level_30 {
+    background: url(http://p1.qhimg.com/d/inn/fef6565a/level.png) no-repeat;
+    background-position: -116px -15px;
+    background-size: 145px 105px
+}
+
+ul .level_31 {
+    background: url(http://p1.qhimg.com/d/inn/fef6565a/level.png) no-repeat;
+    background-position: -116px -30px;
+    background-size: 145px 105px
+}
+
+ul .level_32 {
+    background: url(http://p1.qhimg.com/d/inn/fef6565a/level.png) no-repeat;
+    background-position: -116px -45px;
+    background-size: 145px 105px
+}
+
+ul .level_33 {
+    background: url(http://p1.qhimg.com/d/inn/fef6565a/level.png) no-repeat;
+    background-position: -116px -60px;
+    background-size: 145px 105px
+}
+
+
+/*弹幕结束*/
+
+.video-tip-btm>div {
+    display: flex;
+    display: -webkit-box;
+    /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+    display: -moz-box;
+    /* 老版本语法: Firefox (buggy) */
+    display: -ms-flexbox;
+    /* 混合版本语法: IE 10 */
+    display: -webkit-flex;
+    /* 新版本语法: Chrome 21+ */
+    display: flex;
+    /* 新版本语法: Opera 12.1, Firefox 22+ */
+    justify-content: space-around;
+    align-items: center;
+    -webkit-box-align: center;
+    -moz-align-items: center;
+    -webkit-align-items: center;
+}
+
+
+/*直播输入框*/
+
+.video-tip-btm>.input-con {
+    width: 80%;
+    height: .4rem;
+    margin-left: .1rem;
+    position: relative;
+}
+
+.input-con span {
+    display: block;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    display: -webkit-box;
+    /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+    display: -moz-box;
+    /* 老版本语法: Firefox (buggy) */
+    display: -ms-flexbox;
+    /* 混合版本语法: IE 10 */
+    display: -webkit-flex;
+    /* 新版本语法: Chrome 21+ */
+    display: flex;
+    /* 新版本语法: Opera 12.1, Firefox 22+ */
+    align-items: center;
+    -webkit-box-align: center;
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    justify-content: flex-start;
+    outline: 0;
+    border: 0;
+    background: rgba(3, 3, 3, .3);
+    color: #fff;
+    padding-left: .2rem;
+    border-radius: .4rem;
+}
+
+.input-con a {
+    position: absolute;
+    right: 0.05rem;
+    top: 0.05rem;
+    display: flex;
+    display: -webkit-box;
+    /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+    display: -moz-box;
+    /* 老版本语法: Firefox (buggy) */
+    display: -ms-flexbox;
+    /* 混合版本语法: IE 10 */
+    display: -webkit-flex;
+    /* 新版本语法: Chrome 21+ */
+    display: flex;
+    /* 新版本语法: Opera 12.1, Firefox 22+ */
+    justify-content: center;
+    -webkit-box-pack: center;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    align-items: center;
+    -webkit-box-align: center;
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    font-size: .14rem;
+    height: .3rem;
+    color: #fff;
+    padding: 0 0.1rem;
+    border-radius: .3rem;
+    background: -webkit-linear-gradient(to right, #fe426f 0, #ff7897 100%);
+    background: linear-gradient(to right, #fe426f 0, #ff7897 100%);
+}
+
+.video-tip-btm-1,
+.video-tip-btm-3 {
+    display: flex;
+    display: -webkit-box;
+    /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+    display: -moz-box;
+    /* 老版本语法: Firefox (buggy) */
+    display: -ms-flexbox;
+    /* 混合版本语法: IE 10 */
+    display: -webkit-flex;
+    /* 新版本语法: Chrome 21+ */
+    display: flex;
+    /* 新版本语法: Opera 12.1, Firefox 22+ */
+    justify-content: center;
+    -webkit-box-pack: center;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    align-items: center;
+    -webkit-box-align: center;
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    height: .3rem;
+    /*padding:  0 .05rem;*/
+    background: rgba(122, 122, 126, .5);
+    border-radius: .3rem;
+    color: #fff;
+    font-size: .10rem;
+    margin-right: .1rem;
+}
+
+.video-tip-btm-1>div {
+    display: flex;
+    display: -webkit-box;
+    /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+    display: -moz-box;
+    /* 老版本语法: Firefox (buggy) */
+    display: -ms-flexbox;
+    /* 混合版本语法: IE 10 */
+    display: -webkit-flex;
+    /* 新版本语法: Chrome 21+ */
+    display: flex;
+    /* 新版本语法: Opera 12.1, Firefox 22+ */
+    justify-content: center;
+    -webkit-box-pack: center;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    align-items: center;
+    -webkit-box-align: center;
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    flex-direction: column;
+    height: .3rem;
+    padding-left: .02rem;
+    padding-right: .08rem;
+}
+
+.video-tip-btm-1>div>span {
+    display: block;
+    height: 50%;
+    display: flex;
+    display: -webkit-box;
+    /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+    display: -moz-box;
+    /* 老版本语法: Firefox (buggy) */
+    display: -ms-flexbox;
+    /* 混合版本语法: IE 10 */
+    display: -webkit-flex;
+    /* 新版本语法: Chrome 21+ */
+    display: flex;
+    /* 新版本语法: Opera 12.1, Firefox 22+ */
+    justify-content: center;
+    -webkit-box-pack: center;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    align-items: center;
+    -webkit-box-align: center;
+    -moz-align-items: center;
+    -webkit-align-items: center;
+}
+
+.video-tip-btm-1>span {
+    padding-left: .02rem;
+    padding-right: .08rem;
+}
+
+.video-tip-btm-1>p {
+    height: .28rem;
+    width: .28rem;
+    padding: .01rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.video-tip-btm-1 img {
+    height: 100%;
+}
+
+.video-tip-btm-2 {
+    display: inline-block;
+    height: .26rem;
+    width: .3rem;
+    background: url('../img//h5share_img_notlikeheart.png') no-repeat;
+    background-size: 100% 100%;
+    margin-right: .1rem;
+}
+
+.video-tip-btm-2.actived {
+    background: url('../img//h5share_img_likeheart.png') no-repeat;
+    background-size: 100% 100%;
+}
+
+.video-tip-btm-3 {
+    height: .2rem;
+    padding: 0 .05rem;
+}
+
+.video-tip-btm-4 {
+    display: flex;
+    display: -webkit-box;
+    /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+    display: -moz-box;
+    /* 老版本语法: Firefox (buggy) */
+    display: -ms-flexbox;
+    /* 混合版本语法: IE 10 */
+    display: -webkit-flex;
+    /* 新版本语法: Chrome 21+ */
+    display: flex;
+    /* 新版本语法: Opera 12.1, Firefox 22+ */
+    justify-content: center;
+    -webkit-box-pack: center;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    align-items: center;
+    -webkit-box-align: center;
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    font-size: .12rem;
+    height: .25rem;
+    color: #fff;
+    padding: 0 0.08rem;
+    border-radius: .25rem;
+    background: -webkit-linear-gradient(to right, #fe426f 0, #ff7897 100%);
+    background: linear-gradient(to right, #fe426f 0, #ff7897 100%);
+}
+
+
+/*更多精彩小视频*/
+
+.other-play-video p {
+    height: .4rem;
+    display: flex;
+    display: -webkit-box;
+    /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+    display: -moz-box;
+    /* 老版本语法: Firefox (buggy) */
+    display: -ms-flexbox;
+    /* 混合版本语法: IE 10 */
+    display: -webkit-flex;
+    /* 新版本语法: Chrome 21+ */
+    display: flex;
+    /* 新版本语法: Opera 12.1, Firefox 22+ */
+    justify-content: flex-start;
+    align-items: center;
+    -webkit-box-align: center;
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    padding-left: .1rem;
+}
+
+.other-play-video i {
+    display: inline-block;
+    height: 50%;
+    width: .04rem;
+    background: #fe416e;
+    margin-right: .1rem
+}
+
+.other-play-video-content {
+    display: block;
+    width: 100%;
+}
+
+.other-play-video-content li {
+    display: block;
+    float: left;
+    margin: 0;
+    width: 32.5%;
+    position: relative;
+    height: 0;
+    padding-bottom: 32.5%;
+    overflow: hidden;
+    border: 1px solid #FFF;
+}
+
+.other-play-video-content li img {
+    width: 100%;
+    display: block;
+    padding: 0;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+
+/*footer*/
+
+.footer-con-1 {
+    display: flex;
+    display: -webkit-box;
+    /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+    display: -moz-box;
+    /* 老版本语法: Firefox (buggy) */
+    display: -ms-flexbox;
+    /* 混合版本语法: IE 10 */
+    display: -webkit-flex;
+    /* 新版本语法: Chrome 21+ */
+    display: flex;
+    /* 新版本语法: Opera 12.1, Firefox 22+ */
+    justify-content: center;
+    -webkit-box-pack: center;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    align-items: center;
+    -webkit-box-align: center;
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    height: 1rem;
+    overflow: hidden;
+    margin-top: .3rem;
+    margin-bottom: .2rem;
+}
+
+.qrcode-img,
+.qrcode-txt {
+    height: 100%;
+}
+
+.qrcode-txt {
+    color: #666;
+    display: flex;
+    display: -webkit-box;
+    /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+    display: -moz-box;
+    /* 老版本语法: Firefox (buggy) */
+    display: -ms-flexbox;
+    /* 混合版本语法: IE 10 */
+    display: -webkit-flex;
+    /* 新版本语法: Chrome 21+ */
+    display: flex;
+    /* 新版本语法: Opera 12.1, Firefox 22+ */
+    flex-direction: column;
+    /*justify-content: center;-webkit-box-pack: center;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    justify-content: center;*/
+    align-items: center;
+    -webkit-box-align: center;
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    margin-left: .1rem;
+}
+
+.qrcode-img img {
+    height: 100%;
+}
+
+.qrcode-txt>p {
+    font-size: .15rem;
+    margin-bottom: .02rem;
+}
+
+.qrcode-txt>h4 {
+    font-size: .18rem;
+    font-weight: 500;
+    margin-bottom: .1rem;
+}
+
+.qrcode-txt>a {
+    display: flex;
+    display: -webkit-box;
+    /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+    display: -moz-box;
+    /* 老版本语法: Firefox (buggy) */
+    display: -ms-flexbox;
+    /* 混合版本语法: IE 10 */
+    display: -webkit-flex;
+    /* 新版本语法: Chrome 21+ */
+    display: flex;
+    /* 新版本语法: Opera 12.1, Firefox 22+ */
+    justify-content: center;
+    -webkit-box-pack: center;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    align-items: center;
+    -webkit-box-align: center;
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    font-size: .18rem;
+    height: .35rem;
+    color: #fff;
+    padding: 0 0.08rem;
+    border-radius: .35rem;
+    background: -webkit-linear-gradient(to right, #fe426f 0, #ff7897 100%);
+    background: linear-gradient(to right, #fe426f 0, #ff7897 100%);
+}
+
+.footer-con-2 {
+    width: 100%;
+}
+
+.footer-con-2 img {
+    width: 100%;
+}
+
+
+/*暂停*/
+
+.video-tip-btn {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 100;
+}
+
+.video-tip-pause {
+    width: 50px;
+    height: 50px;
+    left: 50%;
+    bottom: 50%;
+    margin-left: -25px;
+    margin-top: -25px;
+    background-position: -5px -109px;
+    background-size: 89px auto;
+    background-image: url(http://static.huajiao.com/huajiao/activity/resource_dev/share/image/icons_1-b8ae04351b.png);
+    z-index: 4;
+    position: absolute;
+}
+
+
+/*进度条*/
+
+.video-process-bg {
+    width: 100%;
+    height: 2px;
+    background: #ccc;
+    position: absolute;
+    bottom: 0;
+    -webkit-tap-highlight-color: rgba(255, 0, 0, 0);
+    z-index: 123;
+}
+
+.video-process-line {
+    width: 0;
+    height: 100%;
+    background: #fe416e;
+    z-index: 123;
+}
+
+
+/*页面丢失图片*/
+
+.erro-img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: url("../img/err-d4bcf8ad0d.png") no-repeat;
+    background-size: 100% 100%;
+    display: none;
+    z-index: 160;
+}
+
+
+/*.erro-img>img{}*/
+
+
+/*模态框*/
+
+.modal-info {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0);
+    display: none;
+    z-index: 1000;
+}
+
+.close-modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.modal-content {
+    background: rgba(6, 6, 6, .6);
+    color: #fff;
+    width: 70vw;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    margin-left: -35vw;
+    border-radius: .04rem;
+    z-index: 110;
+}
+
+.modal-content>div.other-modal-info {
+    display: flex;
+    display: -webkit-box;
+    /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+    display: -moz-box;
+    /* 老版本语法: Firefox (buggy) */
+    display: -ms-flexbox;
+    /* 混合版本语法: IE 10 */
+    display: -webkit-flex;
+    /* 新版本语法: Chrome 21+ */
+    display: flex;
+    /* 新版本语法: Opera 12.1, Firefox 22+ */
+    justify-content: center;
+    -webkit-box-pack: center;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    flex-direction: column;
+    /*display: none;*/
+}
+
+.modal-content>div>p {
+    display: flex;
+    display: -webkit-box;
+    /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+    display: -moz-box;
+    /* 老版本语法: Firefox (buggy) */
+    display: -ms-flexbox;
+    /* 混合版本语法: IE 10 */
+    display: -webkit-flex;
+    /* 新版本语法: Chrome 21+ */
+    display: flex;
+    /* 新版本语法: Opera 12.1, Firefox 22+ */
+    height: .45rem;
+    font-size: 18px;
+    justify-content: center;
+    -webkit-box-pack: center;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    align-items: center;
+    -webkit-box-align: center;
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    /*border-bottom: 1px solid #e7e7e7;*/
+    cursor: pointer;
+}
+
+.modal-content>div>p:last-child {}
+
+.modal-info p a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    display: -webkit-box;
+    /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+    display: -moz-box;
+    /* 老版本语法: Firefox (buggy) */
+    display: -ms-flexbox;
+    /* 混合版本语法: IE 10 */
+    display: -webkit-flex;
+    /* 新版本语法: Chrome 21+ */
+    display: flex;
+    /* 新版本语法: Opera 12.1, Firefox 22+ */
+    justify-content: center;
+    -webkit-box-pack: center;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    align-items: center;
+    -webkit-box-align: center;
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    color: #fe426f;
+}
+
+
+/*模态框*/

@@ -1,0 +1,753 @@
+@charset "utf-8";
+.show,
+article,
+aside,
+dialog,
+figure,
+footer,
+header,
+nav,
+section {
+    display: block
+}
+
+.msg-tips,
+body,
+img {
+    width: 100%
+}
+
+.icon-login,
+img {
+    vertical-align: middle
+}
+
+.basic-ipt,
+body {
+    font-family: "Microsoft YaHei", arial, simsun, SimHei
+}
+
+blockquote,
+body,
+dd,
+div,
+dl,
+dt,
+fieldset,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+li,
+ol,
+p,
+pre,
+td,
+textarea,
+th,
+ul {
+    padding: 0;
+    margin: 0;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0)
+}
+
+html {
+    font-size: .625%
+}
+
+li {
+    list-style: none
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+img {
+    border: 0
+}
+
+em,
+i {
+    font-style: normal
+}
+
+a {
+    text-decoration: none;
+    color: #333
+}
+
+input {
+    outline: 0
+}
+
+body {
+    font-size: .14rem;
+    background: #fff;
+    color: #000
+}
+
+.red {
+    color: #b71e33
+}
+
+.blue {
+    color: #2c9bff
+}
+
+.green {
+    color: #5dd23a
+}
+
+.orange {
+    color: #ff8b00
+}
+
+.yellow {
+    color: #ffb433
+}
+
+.gray {
+    color: #999
+}
+
+.back {
+    color: #000
+}
+
+.g-b {
+    color: #bbb
+}
+
+.g-6 {
+    color: #666
+}
+
+.lnk {
+    color: #00baff
+}
+
+.pink {
+    color: #f997d8
+}
+
+.ta_c {
+    text-align: center
+}
+
+.ta_r {
+    text-align: right
+}
+
+.ta_l {
+    text-align: left
+}
+
+.center,
+.login-wrap h2,
+.msg-tips {
+    text-align: center
+}
+
+.td-th {
+    text-decoration: line-through
+}
+
+.hide,
+.none {
+    display: none
+}
+
+.fr {
+    float: right
+}
+
+.fl {
+    float: left
+}
+
+.f-12 {
+    font-size: .12rem
+}
+
+.f-14,
+.msg-tips {
+    font-size: .14rem
+}
+
+.msg-tips {
+    background: #282828;
+    color: #fff;
+    overflow: hidden;
+    height: .4rem;
+    line-height: .4rem;
+    position: fixed;
+    top: -.4rem
+}
+
+.doc-mask,
+.panel,
+.panel .close {
+    position: absolute
+}
+
+.login-wrap {
+    padding: 0 .5rem
+}
+
+.login-wrap h2 {
+    padding: .14rem 0;
+    border-bottom: 1px solid #ebebeb;
+    font-weight: 400;
+    font-size: .16rem
+}
+
+.login-wrap .login-way {
+    padding-top: .15rem
+}
+
+.login-wrap .login-way h3 {
+    font-weight: 400;
+    color: #999;
+    text-align: center;
+    font-size: .14rem
+}
+
+.login-wrap .login-way .login-way-list li {
+    height: .44rem;
+    padding-left: .85rem;
+    line-height: .44rem;
+    background: #fff;
+    border: 1px solid #000;
+    border-radius: .04rem;
+    margin-top: .12rem;
+    font-size: .14rem
+}
+
+.withdraw-account .account-name,
+.withdraw-account .operate-list {
+    text-align: center;
+    margin-top: .07rem
+}
+
+.icon-login {
+    display: inline-block;
+    width: .3rem;
+    height: .3rem;
+    margin-right: .08rem;
+    background: url(http://p2.qhimg.com/d/inn/54f0ce06/icon-login.png) no-repeat;
+    background-size: .3rem 1.2rem
+}
+
+.icon-wechat {
+    background-position: 0 0
+}
+
+.icon-QQ {
+    background-position: 0 -.3rem
+}
+
+.icon-weibo {
+    background-position: 0 -.6rem
+}
+
+.icon-phone {
+    background-position: 0 -.9rem
+}
+
+.rechange-tmall {
+    display: none
+}
+
+.wx-text {
+    color: #999;
+    text-align: center;
+    padding-top: 20px
+}
+
+
+
+.withdraw-account .withdraw-account-top {
+    border-bottom: 1px solid #ebebeb;
+    padding: .16rem 0 .12rem
+}
+
+.withdraw-account .withdraw-tit {
+    text-align: center;
+    font-weight: 400;
+    color: #999;
+    font-size: .14rem
+}
+
+.withdraw-account .account-name {
+    font-size: .18rem
+}
+
+.withdraw-account .operate-list .dividing,
+.withdraw-account .operate-list .operate-item {
+    display: inline-block;
+    vertical-align: middle;
+    color: #00baff
+}
+
+.withdraw-account .operate-list .dividing {
+    margin: 0 .2rem
+}
+
+.withdraw-account .account-msg {
+    padding: 0 .15rem;
+    height: .5rem;
+    line-height: .5rem;
+    border-bottom: 1px solid #ebebeb
+}
+
+.basic-ipt {
+    border: none;
+    font-size: .14rem
+}
+
+.form-hd .form-tit,
+.form-hd .phone-num {
+    font-size: .16rem;
+    margin-top: .1rem
+}
+
+.form .form-item {
+    display: -webkit-box;
+    display: -ms-flexbox
+}
+
+.form .form-item .label {
+    display: block;
+    width: .7rem;
+    text-align: right;
+    margin-right: .05rem
+}
+
+.form .form-item .txt {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    display: block
+}
+
+.form-withdraw {
+    margin-top: .1rem;
+    border-top: 1px solid #ebebeb;
+    border-bottom: 1px solid #ebebeb
+}
+
+.form-withdraw .form-item {
+    height: .5rem;
+    margin: 0 0 0 .15rem;
+    padding-right: .15rem;
+    border-bottom: 1px solid #ebebeb
+}
+
+.form-btn,
+.form-hd {
+    padding: 0 .15rem
+}
+
+.form-withdraw .form-item:last-of-type {
+    border-bottom: none
+}
+
+.form-withdraw .form-item .label {
+    line-height: .5rem
+}
+
+.form-withdraw .basic-ipt {
+    height: .5rem;
+    width: 100%
+}
+
+.form-btn .btn-primary,
+.form-btn .subline {
+    margin-top: .15rem
+}
+
+.form-btn .tips {
+    color: #bfbfbf
+}
+
+.form-hd {
+    text-align: center
+}
+
+.form-hd .form-tit {
+    font-weight: 400
+}
+
+.form-hd .fm-tips {
+    margin-top: .1rem;
+    color: #999
+}
+
+.form-sent {
+    margin: .15rem .15rem 0
+}
+
+.form-sent .tips {
+    padding-bottom: .15rem;
+    color: #999
+}
+
+.form-sent .error {
+    margin-top: .05rem
+}
+
+.form-sent .form-item {
+    border: 1px solid #e6e6e6;
+    height: .45rem;
+    border-radius: .04rem;
+    margin-bottom: .15rem;
+    box-sizing: border-box
+}
+
+.form-sent .basic-ipt {
+    width: 100%;
+    height: .43rem;
+    padding: 0 .05rem;
+    box-sizing: border-box;
+    border-radius: .04rem
+}
+
+.form-sent .sms-code {
+    width: .95rem;
+    text-align: center;
+    border: 1px solid #e6e6e6;
+    margin: 1px;
+    background: #f2f2f2;
+    border-radius: .04rem;
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: center
+}
+
+.form-sent .form-item-code {
+    border: none;
+    height: auto;
+    margin-bottom: .2rem
+}
+
+.form-sent .form-item-code .basic-ipt {
+    height: .45rem;
+    border: 1px solid #e6e6e6;
+    border-radius: .04rem
+}
+
+.form-sent .two-code {
+    display: block;
+    text-align: center;
+    width: 1rem;
+    margin-left: .1rem
+}
+
+.form-sent .two-code img {
+    display: block;
+    height: .45rem;
+    border: 1px solid #e6e6e6;
+    box-sizing: border-box
+}
+
+.form-sent .code-tips {
+    display: block;
+    font-size: .12rem;
+    color: #929292;
+    margin-top: .05rem
+}
+
+.panel-sent .panel-hd h2,
+.panel-withdraw .panel-hd h2 {
+    font-size: .16rem;
+    font-weight: 400
+}
+
+.btns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    padding: 0 .15rem
+}
+
+.btns .btn {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    display: block;
+    width: 0
+}
+
+.btn-primary {
+    display: block;
+    height: .48rem;
+    line-height: .48rem;
+    text-align: center;
+    color: #fff;
+    background: #3fb3f0;
+    border-radius: .04rem;
+    box-sizing: border-box
+}
+
+.btn-confirm,
+.btn-primary-s,
+.btn-quit {
+    text-align: center;
+    height: .4rem;
+    line-height: .4rem
+}
+
+.btn-quit {
+    color: #000
+}
+
+.btn-confirm {
+    color: #38c9ff
+}
+
+.btn-primary-s {
+    width: .9rem
+}
+
+.btn-disabled {
+    border: 1px solid #d8d8d8;
+    background: #f2f2f2;
+    color: #999
+}
+
+.panel-sent .panel-hd,
+.panel-withdraw .panel-hd {
+    border-bottom: 1px solid #dcdcdc;
+    text-align: center
+}
+
+.doc-mask {
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, .5);
+    width: 100%;
+    height: 100%;
+    z-index: 99
+}
+
+.panel-sent,
+.panel-withdraw {
+    left: .3rem;
+    right: .3rem;
+    top: .6rem;
+    background: #fff;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .5);
+    border-radius: .05rem
+}
+
+.panel {
+    z-index: 100
+}
+
+.panel-withdraw .panel-hd {
+    height: .45rem;
+    line-height: .45rem
+}
+
+.panel-withdraw .panel-withdraw-list {
+    padding: .1rem
+}
+
+.panel-withdraw .panel-withdraw-list li {
+    line-height: .24rem;
+    color: #999
+}
+
+.panel-withdraw .panel-withdraw-list .tit {
+    float: left;
+    width: .6rem
+}
+
+.panel .btns {
+    border-top: 1px solid #eaeaea
+}
+
+.panel .btns .btn {
+    border-right: 1px solid #eaeaea
+}
+
+.panel .btns .btn:last-of-type {
+    border-right: none
+}
+
+.panel-sent .panel-hd {
+    height: .45rem;
+    line-height: .45rem
+}
+
+.feedback,
+.withdraw-record .record-hd,
+.withdraw-record-list,
+.withdraw-record-list li {
+    border-bottom: 1px solid #e6e6e6
+}
+
+.panel .close {
+    right: 0;
+    top: 0;
+    height: .45rem;
+    width: .45rem;
+    font-size: .3rem
+}
+
+.panel-sent .form-sent {
+    margin: .2rem .15rem 0
+}
+
+.feedback {
+    text-align: center;
+    padding: .35rem 0
+}
+
+.feedback .icon {
+    display: block;
+    margin: 0 auto;
+    width: .66rem;
+    height: .66rem;
+    background: url(http://p3.qhimg.com/d/inn/decb5e0a/icon-error.png) no-repeat;
+    background-size: .66rem .66rem
+}
+
+.feedback .icon-error {
+    background-position: 0 0
+}
+
+.feedback p {
+    margin-top: .15rem
+}
+
+.withdraw-record .record-hd h2 {
+    padding: .14rem 0;
+    text-align: center;
+    font-weight: 400;
+    font-size: .16rem
+}
+
+.withdraw-record-list li {
+    margin-left: .15rem;
+    padding: .1rem .15rem .1rem 0;
+    overflow: hidden
+}
+
+.withdraw-record-list li:last-of-type {
+    border-bottom: none
+}
+
+.withdraw-record-list p {
+    line-height: .2rem
+}
+
+.withdraw-memo {
+    margin: .08rem 0 .08rem .08rem
+}
+
+.withdraw-memo p {
+    margin: .05rem 0
+}
+
+.popup-dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .6);
+    z-index: 1002;
+    display: none
+}
+
+.popup-wrap {
+    height: 100%;
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: center
+}
+
+.popup {
+    width: 300px;
+    position: relative;
+    background-color: #fff;
+    background-size: 100% auto;
+    -webkit-background-size: 100% auto;
+    border-radius: 8px
+}
+
+.popup .popup-bg {
+    height: 115px;
+    text-align: center;
+    background: url(http://p1.qhimg.com/d/inn/3557838b/cartoon.png) center center no-repeat #ffd803;
+    background-size: 50%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px
+}
+
+.popup-text {
+    font-size: 14px;
+    color: #000;
+    text-align: center;
+    line-height: 20px;
+    padding: 31px 35px
+}
+
+.popup-bg a {
+    position: absolute;
+    display: block;
+    right: 10px;
+    top: 10px;
+    width: 34px;
+    height: 34px
+}
+
+.popup-btn-close:after,
+.popup-btn-close:before {
+    content: '';
+    height: 2px;
+    width: 18px;
+    display: block;
+    background: #665601;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    position: absolute;
+    top: 16px;
+    left: 8px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg)
+}
+
+.popup-btn-close:after {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg)
+}
+
+.popup-btn-kefu {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 31px 25px;
+    background-color: #000;
+    color: #fff;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 4px
+}
+
+.popup-reason .popup-text {
+    text-align: left;
+    padding: 23px 30px 17px
+}
+
+.popup-reason .popup-text span {
+    display: block;
+    font-size: 12px;
+    color: #666;
+    margin-top: 7px
+}
